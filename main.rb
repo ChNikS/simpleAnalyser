@@ -94,7 +94,6 @@ while row = csv.shift
 		end
 	end
 
-	#puts "user #{row[1]} count is - #{$userHash[row[1]]['count']}"
 	#handle user
 	userBytesArray = handleUser(row[1], $userHash[row[1]]['inBytesTop'], true, userBytesArray)
 	userCountArray = handleUser(row[1], $userHash[row[1]]['inCountTop'], false, userCountArray)
@@ -108,10 +107,3 @@ resultFile.write("Решение1\n")
 resultFile.write("# Поиск 5ти пользователкй отправивших наибольшее число данных\n")
 resultFile.write("Решение2\n")
 (userCountArray.length-1).downto(0) {|u| resultFile.write"#{userBytesArray[u]}\n"}
-
-
-
-
-#puts 
-
-#handleUser('user')
